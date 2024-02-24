@@ -1,4 +1,4 @@
-package com.wbt.fullstack.talentrequestservice;
+package com.wbt.fullstack.talentfulfillmentservice;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = {"/test"})
+@RequestMapping(path = {"/careers"})
 public class TestController {
+
+    private final Environment env;
 
     @Value("${spring.application.name}")
     private String serviceName;
-
-    private final Environment env;
 
     public TestController(Environment env) {
         this.env = env;
@@ -21,6 +21,6 @@ public class TestController {
 
     @GetMapping
     public String getTest() {
-        return "Test from %s:%s".formatted(serviceName, env.getProperty("local.server.port"));
+        return "Test from %s:%s".formatted(serviceName, env.getProperty("server.port"));
     }
 }
