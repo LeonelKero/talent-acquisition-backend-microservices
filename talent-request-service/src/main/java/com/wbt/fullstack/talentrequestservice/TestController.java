@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = {"/test"})
+@RequestMapping(path = {"/request"})
 public class TestController {
 
     @Value("${spring.application.name}")
