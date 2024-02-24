@@ -2,13 +2,26 @@ server:
   port: 8080
 
 spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
   application:
     name: talent-api-gateway
+  cloud:
+    gateway:
+
+#        routes:
+#          - id: talent-request-route
+#            uri: ${TALENT-REQUEST-SERVICE:http://localhost:8083}
+#            predicates:
+#              - Path=/test
+#            filters:
+#              - PrefixPath=/api
+#  cloud:
+#    gateway:
+#      mvc:
+#        routes:
+#          - id: talent-request
+#            uri: http://localhost:8083/
+#            predicates:
+#              - Path=/**
 
 eureka:
   client:
