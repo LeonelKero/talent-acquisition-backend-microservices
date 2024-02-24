@@ -9,7 +9,7 @@
         <module name="talent-fulfillment-service" />
         <module name="career-portal-service" />
         <module name="talent-request-service" />
-        <module name="talent-api-getway" />
+        <module name="talent-api-gateway" />
         <module name="talent-discovery-service" />
       </profile>
     </annotationProcessing>
@@ -17,7 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="career-portal-service" options="-parameters" />
-      <module name="talent-api-getway" options="-parameters" />
+      <module name="talent-api-gateway" options="-parameters" />
       <module name="talent-discovery-service" options="-parameters" />
       <module name="talent-fulfillment-service" options="-parameters" />
       <module name="talent-request-service" options="-parameters" />
