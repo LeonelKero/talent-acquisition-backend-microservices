@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/talent-discovery-service/pom.xml" />
         <option value="$PROJECT_DIR$/talent-fulfillment-service/pom.xml" />
         <option value="$PROJECT_DIR$/talent-api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/talent-api-gateway-reactive/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,6 +11,7 @@
         <module name="talent-request-service" />
         <module name="talent-api-gateway" />
         <module name="talent-discovery-service" />
+        <module name="talent-api-gateway-reactive" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="career-portal-service" options="-parameters" />
       <module name="talent-api-gateway" options="-parameters" />
+      <module name="talent-api-gateway-reactive" options="-parameters" />
       <module name="talent-discovery-service" options="-parameters" />
       <module name="talent-fulfillment-service" options="-parameters" />
       <module name="talent-request-service" options="-parameters" />
