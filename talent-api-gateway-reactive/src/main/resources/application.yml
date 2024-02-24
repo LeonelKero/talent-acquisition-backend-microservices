@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: api-gateway-reactive
+    name: talent-api-gateway-reactive
   cloud:
     gateway:
       discovery:
