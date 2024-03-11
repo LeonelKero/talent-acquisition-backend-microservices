@@ -18,5 +18,5 @@ public class CreateTalentRequestCommand {
     private JobDescription jobDescription;
     private CandidateSkills candidateSkills;
     private RequestStatus requestStatus;
-    private LocalDate localDate;
+    private LocalDate startDate;
 }
