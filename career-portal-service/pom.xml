@@ -63,6 +63,12 @@
             <artifactId>guava</artifactId>
             <version>33.0.0-jre</version>
         </dependency>
+        <!--		CORE API DEPENDENCY-->
+        <dependency>
+            <groupId>com.wbt</groupId>
+            <artifactId>talent-core-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>
