@@ -63,6 +63,12 @@
             <artifactId>guava</artifactId>
             <version>33.0.0-jre</version>
         </dependency>
+        <!--        CONSOLE CONFIG-->
+        <dependency>
+            <groupId>io.axoniq.console</groupId>
+            <artifactId>console-framework-client-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
         <!--		CORE API DEPENDENCY-->
         <dependency>
             <groupId>com.wbt</groupId>

@@ -11,3 +11,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
+
+axoniq:
+  console:
+    credentials: 66d6c26b-0:baab48056c5748318a39e016dd93e96e

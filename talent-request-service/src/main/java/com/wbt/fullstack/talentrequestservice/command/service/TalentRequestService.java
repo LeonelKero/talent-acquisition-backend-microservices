@@ -30,7 +30,7 @@ public record TalentRequestService(CommandGateway commandGateway) {
                 .startDate(talentRequestCommandDto.getStartDate())
                 .build();
         try {
-            this.commandGateway.sendAndWait(talentRequestCommand);
+            this.commandGateway.sendAndWait(talentRequestCommand); // send request to the command bus
             final var talentRequestResponseDto = new TalentRequestResponseDto();
             BeanUtils.copyProperties(talentRequestCommand, talentRequestResponseDto);
 
