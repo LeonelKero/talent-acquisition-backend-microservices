@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public record TalentRequestCommandController(TalentRequestService talentRequestService) {
 
     @PostMapping
-    public ResponseEntity createTalentRequest(final @RequestBody CreateTalentRequestCommandDto talentRequestCommandDto) {
+    public ResponseEntity<?> createTalentRequest(final @RequestBody CreateTalentRequestCommandDto talentRequestCommandDto) {
         return this.talentRequestService.createNewTalentRequest(talentRequestCommandDto);
     }
 
