@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/talent-fulfillment-service/pom.xml" />
         <option value="$PROJECT_DIR$/talent-api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/talent-api-gateway-reactive/pom.xml" />
+        <option value="$PROJECT_DIR$/talent-core-api/pom.xml" />
       </list>
     </option>
   </component>
