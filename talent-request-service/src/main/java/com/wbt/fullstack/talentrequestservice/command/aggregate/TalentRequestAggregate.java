@@ -42,7 +42,7 @@ public class TalentRequestAggregate {
 
     /**
      * @param requestCreatedEvent represents the event.
-     * @apiNote This is a convention for Axon, this method which update the state of the aggregate by convention it is named "public void on(@params)".
+     * @apiNote This is a convention for Axon, this method which update the state of the aggregate. By convention, it is named "public void on(@params)".
      *
      */
     @EventSourcingHandler
