@@ -28,6 +28,10 @@ public class TalentRequestAggregate {
     private RequestStatus requestStatus;
     private LocalDate localDate;
 
+    /**
+     * @param talentRequestCommand Represents the command we want to dispatch
+     * @apiNote This handler will be call when we want to dispatch a command of type CreateTalentRequestCommand.
+     */
     @CommandHandler
     public TalentRequestAggregate(final CreateTalentRequestCommand talentRequestCommand) {
         final var talentCreatedEvent = new TalentRequestCreatedEvent();
