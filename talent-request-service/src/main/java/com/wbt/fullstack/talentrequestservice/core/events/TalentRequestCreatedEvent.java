@@ -7,6 +7,9 @@ import lombok.Data;
 
 import java.time.LocalDate;
 
+/**
+ * This class defines which properties of the event will be persisted in the event store
+ */
 @Data
 public class TalentRequestCreatedEvent {
 
