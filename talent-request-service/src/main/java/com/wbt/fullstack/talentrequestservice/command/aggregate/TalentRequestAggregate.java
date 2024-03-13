@@ -29,7 +29,7 @@ public class TalentRequestAggregate {
     private LocalDate localDate;
 
     /**
-     * @param talentRequestCommand Represents the command we want to dispatch
+     * @param talentRequestCommand Represents the command we want to dispatch.
      * @apiNote This handler will be call when we want to dispatch a command of type CreateTalentRequestCommand.
      */
     @CommandHandler
@@ -40,6 +40,11 @@ public class TalentRequestAggregate {
         AggregateLifecycle.apply(talentCreatedEvent);
     }
 
+    /**
+     * @param requestCreatedEvent represents the event.
+     * @apiNote This is a convention for Axon, this method which update the state of the aggregate by convention it is named "public void on(@params)".
+     *
+     */
     @EventSourcingHandler
     public void on(final TalentRequestCreatedEvent requestCreatedEvent) {
         this.talentRequestId = requestCreatedEvent.getTalentRequestId();
