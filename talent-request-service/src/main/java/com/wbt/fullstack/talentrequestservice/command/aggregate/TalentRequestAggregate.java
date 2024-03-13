@@ -36,7 +36,7 @@ public class TalentRequestAggregate {
     public TalentRequestAggregate(final CreateTalentRequestCommand talentRequestCommand) {
         final var talentCreatedEvent = new TalentRequestCreatedEvent();
         BeanUtils.copyProperties(talentRequestCommand, talentCreatedEvent);
-        // dispatch the event to the store
+        // dispatch the event to the event store
         AggregateLifecycle.apply(talentCreatedEvent);
     }
 
