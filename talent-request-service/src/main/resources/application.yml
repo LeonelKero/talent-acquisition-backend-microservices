@@ -4,6 +4,18 @@ server:
 spring:
   application:
     name: talent-request-service
+  h2:
+    console-path: /h2
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:talent_requests
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
 
 eureka:
   client:
@@ -15,3 +27,11 @@ eureka:
 axoniq:
   console:
     credentials: 66d6c26b-0:baab48056c5748318a39e016dd93e96e
+
+
+# h2 database configuration
+#  spring.h2.console-path=/h2
+#  spring.h2.console.enabled=true
+#  spring.datasource.url=jdbc:h2:mem:talent_requests
+#  spring.h2.console.settings.web-allow-others=true
+#  spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
