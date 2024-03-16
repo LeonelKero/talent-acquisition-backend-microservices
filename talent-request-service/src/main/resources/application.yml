@@ -5,8 +5,8 @@ spring:
   application:
     name: talent-request-service
   h2:
-    console-path: /h2
     console:
+      path: /h2
       enabled: true
       settings:
         web-allow-others: true
@@ -24,10 +24,10 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
 
-axoniq:
-  console:
-    credentials: 66d6c26b-0:baab48056c5748318a39e016dd93e96e
-
+#axoniq:
+#  console:
+#    credentials: 66d6c26b-0:baab48056c5748318a39e016dd93e96e
+#
 
 # h2 database configuration
 #  spring.h2.console-path=/h2
