@@ -8,13 +8,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TalentRequestEventHandler {
-
-    private final TalentRequestRepository talentRequestRepository;
-
-    public TalentRequestEventHandler(TalentRequestRepository talentRequestRepository) {
-        this.talentRequestRepository = talentRequestRepository;
-    }
+public record TalentRequestEventHandler(TalentRequestRepository talentRequestRepository) {
 
     @EventHandler
     public void on(final TalentRequestCreatedEvent event) {
