@@ -31,6 +31,7 @@ public class TalentRequestAggregate {
     /**
      * @param talentRequestCommand Represents the command we want to dispatch.
      * @apiNote This handler will be call when we want to dispatch a command of type CreateTalentRequestCommand.
+     * @apiNote IMPORTANT : This is the first action performed as it is within the constructor
      */
     @CommandHandler
     public TalentRequestAggregate(final CreateTalentRequestCommand talentRequestCommand) {
@@ -43,7 +44,7 @@ public class TalentRequestAggregate {
                 talentRequestCommand.getRequestStatus(),
                 talentRequestCommand.getStartDate());
 //        BeanUtils.copyProperties(talentRequestCommand, talentCreatedEvent);
-        // dispatch the event to the event store
+        // dispatch/publish the event to the event store
         AggregateLifecycle.apply(talentCreatedEvent);
     }
 
