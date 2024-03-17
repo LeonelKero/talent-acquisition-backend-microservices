@@ -34,8 +34,14 @@ public class TalentRequestAggregate {
      */
     @CommandHandler
     public TalentRequestAggregate(final CreateTalentRequestCommand talentRequestCommand) {
-        final var talentCreatedEvent = new TalentRequestCreatedEvent();
-        BeanUtils.copyProperties(talentRequestCommand, talentCreatedEvent);
+        final var talentCreatedEvent = new TalentRequestCreatedEvent(
+                talentRequestCommand.getTalentRequestId(),
+                talentRequestCommand.getTalentRequestTitle(),
+                talentRequestCommand.getJobDescription(),
+                talentRequestCommand.getCandidateSkills(),
+                talentRequestCommand.getRequestStatus(),
+                talentRequestCommand.getStartDate());
+//        BeanUtils.copyProperties(talentRequestCommand, talentCreatedEvent);
         // dispatch the event to the event store
         AggregateLifecycle.apply(talentCreatedEvent);
     }
@@ -43,15 +49,14 @@ public class TalentRequestAggregate {
     /**
      * @param requestCreatedEvent represents the event.
      * @apiNote This is a convention for Axon, this method which update the state of the aggregate. By convention, it is named "public void on(@params)".
-     *
      */
     @EventSourcingHandler
     public void on(final TalentRequestCreatedEvent requestCreatedEvent) {
-        this.talentRequestId = requestCreatedEvent.getTalentRequestId();
-        this.talentRequestTitle = requestCreatedEvent.getTalentRequestTitle();
-        this.jobDescription = requestCreatedEvent.getJobDescription();
-        this.candidateSkills = requestCreatedEvent.getCandidateSkills();
-        this.requestStatus = requestCreatedEvent.getRequestStatus();
-        this.localDate = requestCreatedEvent.getStartDate();
+        this.talentRequestId = requestCreatedEvent.talentRequestId();
+        this.talentRequestTitle = requestCreatedEvent.talentRequestTitle();
+        this.jobDescription = requestCreatedEvent.jobDescription();
+        this.candidateSkills = requestCreatedEvent.candidateSkills();
+        this.requestStatus = requestCreatedEvent.requestStatus();
+        this.localDate = requestCreatedEvent.startDate();
     }
 }
