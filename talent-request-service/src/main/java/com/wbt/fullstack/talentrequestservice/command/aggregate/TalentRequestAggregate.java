@@ -34,6 +34,7 @@ public class TalentRequestAggregate {
      */
     @CommandHandler
     public TalentRequestAggregate(final CreateTalentRequestCommand talentRequestCommand) {
+        //  Forge an event for that command
         final var talentCreatedEvent = new TalentRequestCreatedEvent(
                 talentRequestCommand.getTalentRequestId(),
                 talentRequestCommand.getTalentRequestTitle(),
